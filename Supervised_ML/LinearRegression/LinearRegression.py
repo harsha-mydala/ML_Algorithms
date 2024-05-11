@@ -5,7 +5,7 @@ class LinearRegression():
 
     def __init__(self,lr=0.01,n_iter=150):
 
-        self.lr = lr
+        self.lr = lr 
         self.n_iter = n_iter
         self.weights = None
         self.bias = None
@@ -21,6 +21,9 @@ class LinearRegression():
             y_pred = torch.matmul(X,self.weights)
             self.update_loss(y_pred,y)
             dw = 1/n_samples*((torch.matmul(X.T,(y_pred-y))))
+            y_pred = torch.matmul(X,self.weights) #changed from dot to matmul as they are 2D tensors.
+
+            dw = 1/n_samples*(torch.dot(X.T,(y_pred-y)))
             self.weights = self.weights-self.lr*dw
 
     def predict(self,X):
