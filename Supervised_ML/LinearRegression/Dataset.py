@@ -1,4 +1,6 @@
 import torch
+# torch.manual_seed(410)
+
 
 class LinearRegressionDataset():
     def __init__(self, n_samples=100, n_features=1, noise=1.0):
