@@ -6,3 +6,5 @@
 
 ![img](../plots/KNN_comparison.png)
 ## Figure shows comparison of actual class and predicted class
+
+## First comment
