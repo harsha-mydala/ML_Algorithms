@@ -12,7 +12,7 @@ class LogisticRegression():
 
         return 1/(1+torch.exp(-x))
 
-    def predict(self, X, y):
+    def predictjithin(self, X, y):
 
         n_samples,n_features = X.shape[0], X.shape[1]
 
